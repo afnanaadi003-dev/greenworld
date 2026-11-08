@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green World Philosophy — Living in Harmony with Earth & Universe</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        green: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            500: '#10b981',
+                            600: '#059669',
+                            700: '#047857',
+                            900: '#064e3b',
+                        },
+                        sky: {
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #10b981;
+            border-radius: 9999px;
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #059669 0%, #0ea5e9 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #059669 0%, #0284c7 100%);
+        }
+        .card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .card-hover:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px -10px rgba(16, 185, 129, 0.25);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased overflow-x-hidden">
+
+    <!-- TOP NAVIGATION BAR -->
+    <header class="sticky top-0 z-40 w-full glass-nav border-b border-slate-200/80 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Logo -->
+            <div class="flex items-center space-x-3 cursor-pointer" onclick="scrollToSection('hero')">
+                <div class="w-11 h-11 rounded-2xl gradient-bg flex items-center justify-center text-white text-xl shadow-lg shadow-green-500/20">
+                    <i class="fa-solid font-bold fa-leaf"></i>
+                </div>
+                <div>
+                    <span class="text-xl font-extrabold tracking-tight text-slate-900 block leading-none">GREEN WORLD</span>
+                    <span class="text-xs font-semibold text-green-600 tracking-wider uppercase">PHILOSOPHY</span>
+                </div>
+            </div>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden lg:flex items-center space-x-8 text-sm font-semibold text-slate-600">
+                <a href="#hero" class="hover:text-green-600 transition-colors">Philosophy</a>
+                <a href="#hub" class="hover:text-green-600 transition-colors">Pollution & Manifesto</a>
+                <a href="#alternatives" class="hover:text-green-600 transition-colors">Eco-Alternatives</a>
+                <a href="#magazine" class="hover:text-green-600 transition-colors">Green Habits</a>
+            </nav>
+
+            <!-- Navigation Controls & Drawer Toggles -->
+            <div class="flex items-center space-x-3">
+                <button onclick="toggleDrawer('booksDrawer')" class="hidden sm:flex items-center space-x-2 px-4 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-sm font-medium transition-colors">
+                    <i class="fa-solid fa-book-bookmark text-green-600"></i>
+                    <span>1,000 Books</span>
+                </button>
+
+                <button onclick="toggleDrawer('visionariesDrawer')" class="hidden sm:flex items-center space-x-2 px-4 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-sm font-medium transition-colors">
+                    <i class="fa-solid fa-users text-sky-600"></i>
+                    <span>100 Visionaries</span>
+                </button>
+
+                <button onclick="toggleDrawer('mainMenuDrawer')" class="p-3 rounded-xl bg-green-500 text-white hover:bg-green-600 shadow-md shadow-green-500/20 transition-all">
+                    <i class="fa-solid fa-bars text-lg"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="hero" class="relative pt-12 pb-20 lg:pt-20 lg:pb-28 overflow-hidden bg-gradient-to-b from-green-50/60 via-white to-slate-50">
+        <!-- Background Blur Blobs -->
+        <div class="absolute top-10 left-1/2 -translate-x-1/2 w-[800px] h-[350px] bg-gradient-to-r from-green-300/20 to-sky-300/20 blur-3xl -z-10 rounded-full"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Hero Left: Text & Search -->
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="inline-flex items-center space-x-2 px-3 py-1.5 rounded-full bg-green-100 text-green-800 text-xs font-bold tracking-wide uppercase">
+                        <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+                        <span>Global Ecological Transformation</span>
+                    </div>
+
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-[1.15] tracking-tight">
+                        Harmonize Human Existence with <span class="gradient-text">Earth & Cosmos</span>
+                    </h1>
+
+                    <p class="text-lg text-slate-600 font-normal leading-relaxed max-w-2xl">
+                        Abandoning nature's destruction—plastic polybags, deforestation, soil degradation, body biological decay, eye declensions, and cosmic imbalance. Explore <strong class="text-slate-800 font-semibold">50,000 Eco-Alternatives</strong> to preserve all living beings and biological systems.
+                    </p>
+
+                    <!-- Dynamic Search Box -->
+                    <div class="relative max-w-xl pt-2">
+                        <div class="relative flex items-center">
+                            <i class="fa-solid fa-magnifying-glass absolute left-4 text-slate-400 text-lg"></i>
+                            <input type="text" id="globalSearchInput" onkeyup="handleGlobalSearch(event)" placeholder="Search alternatives (e.g., Bamboo polybag, Bio-Hair Care, Solar Sleeping)..." 
+                                class="w-full pl-12 pr-32 py-4 rounded-2xl bg-white border border-slate-200 shadow-xl shadow-slate-200/50 focus:outline-none focus:ring-2 focus:ring-green-500 text-sm font-medium text-slate-700">
+                            <button onclick="triggerSearch()" class="absolute right-2 px-5 py-2.5 bg-green-600 hover:bg-green-700 text-white rounded-xl text-sm font-semibold transition-all">
+                                Find Solutions
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Impact Counter Bar -->
+                    <div class="grid grid-cols-3 gap-4 pt-6 border-t border-slate-200/80">
+                        <div>
+                            <div class="text-2xl sm:text-3xl font-extrabold text-slate-900">50,000+</div>
+                            <div class="text-xs text-slate-500 font-medium">Eco Alternatives</div>
+                        </div>
+                        <div>
+                            <div class="text-2xl sm:text-3xl font-extrabold text-slate-900">100%</div>
+                            <div class="text-xs text-slate-500 font-medium">Zero-Plastic Goals</div>
+                        </div>
+                        <div>
+                            <div class="text-2xl sm:text-3xl font-extrabold text-sky-600">5 Cosmological</div>
+                            <div class="text-xs text-slate-500 font-medium">Harmonizations</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Right: Founder Spotlight Card -->
+                <div class="lg:col-span-5">
+                    <div class="relative rounded-3xl bg-white p-6 sm:p-8 shadow-2xl shadow-slate-200 border border-slate-100 overflow-hidden group">
+                        <div class="absolute -top-12 -right-12 w-40 h-40 bg-green-100 rounded-full blur-2xl group-hover:bg-green-200 transition-colors"></div>
+                        
+                        <div class="relative space-y-5">
+                            <div class="flex items-center space-x-4">
+                                <div class="relative">
+                                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=250" alt="Amim Ahsan" class="w-20 h-20 rounded-2xl object-cover ring-4 ring-green-100 shadow-md">
+                                    <span class="absolute -bottom-1 -right-1 bg-green-500 text-white p-1 rounded-full text-xs" title="Founder & Lead Philosopher">
+                                        <i class="fa-solid fa-certificate"></i>
+                                    </span>
+                                </div>
+                                <div>
+                                    <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-green-100 text-green-800 uppercase tracking-wider">Lead Green Philosopher</span>
+                                    <h3 class="text-2xl font-bold text-slate-900">Amim Ahsan</h3>
+                                    <p class="text-xs text-slate-500 font-medium">Visionary & Founder of Green World Philosophy</p>
+                                </div>
+                            </div>
+
+                            <blockquote class="text-sm italic text-slate-600 border-l-4 border-green-500 pl-4 py-1">
+                                "The universe is an unbroken continuum. When we cut down a tree or discard synthetic polybags, we disrupt the cosmic bio-energy that sustains human eye clarity, hair vitality, clean soil, and star stability."
+                            </blockquote>
+
+                            <div class="bg-slate-50 rounded-2xl p-4 space-y-2 border border-slate-100 text-xs text-slate-600">
+                                <div class="flex justify-between font-semibold text-slate-800">
+                                    <span>Core Manifesto Focus:</span>
+                                    <span class="text-green-600">Complete Restoration</span>
+                                </div>
+                                <p>Advocating bio-compatible housing, organic diets, natural eyesight recovery, and zero-carbon cosmic balance.</p>
+                            </div>
+
+                            <div class="flex items-center justify-between pt-2">
+                                <button onclick="openManifestoModal()" class="w-full py-3 bg-slate-900 hover:bg-slate-800 text-white font-semibold rounded-xl text-xs sm:text-sm transition-all flex items-center justify-center space-x-2">
+                                    <i class="fa-solid fa-file-pdf text-red-400"></i>
+                                    <span>Read 50,000-Word Eco Manifesto</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: ENVIRONMENTAL POLLUTION & COSMIC HARMONY HUB -->
+    <section id="hub" class="py-16 bg-white border-y border-slate-200/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-12">
+                <span class="text-xs font-extrabold uppercase tracking-widest text-sky-600">Diagnostic & Solutions Hub</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">5 Core Pillars of Universal Pollution</h2>
+                <p class="text-slate-600 text-sm sm:text-base">Understanding the root degradation of Earth's bio-bodies, soil, water, atmospheric oxygen, and extraterrestrial balance.</p>
+            </div>
+
+            <!-- 5 Pollution Category Tabs -->
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-4 mb-8" id="pollutionTabs">
+                <!-- Buttons injected by JS -->
+            </div>
+
+            <!-- Active Category Detailed View -->
+            <div id="pollutionDetailContainer" class="bg-slate-50 border border-slate-200 rounded-3xl p-6 sm:p-8 shadow-sm">
+                <!-- Content injected dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: 50,000 ECO-ALTERNATIVES MATRIX & CAROUSEL -->
+    <section id="alternatives" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 space-y-4 md:space-y-0">
+                <div>
+                    <span class="text-xs font-extrabold uppercase tracking-widest text-green-600">Sustainable Replacement Engine</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">50,000 Eco-Alternatives Catalog</h2>
+                    <p class="text-slate-600 text-sm mt-1">Replacing destructive industrial items with futuristic, zero-pollution bio-alternatives.</p>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <span class="text-xs font-semibold text-slate-500">Futuristic Level:</span>
+                    <span class="px-2.5 py-1 bg-green-100 text-green-800 rounded-full text-xs font-bold">5 Stars Standard</span>
+                </div>
+            </div>
+
+            <!-- Categories Filter Slider / Horizontal Scroll -->
+            <div class="flex space-x-3 overflow-x-auto pb-4 custom-scrollbar mb-8" id="categoryFilterContainer">
+                <!-- Filter buttons rendered dynamically -->
+            </div>
+
+            <!-- Alternatives Cards Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" id="alternativesGrid">
+                <!-- Alternative cards rendered dynamically -->
+            </div>
+
+            <!-- View More / Stats Banner -->
+            <div class="mt-12 text-center bg-gradient-to-r from-green-600 to-sky-600 rounded-3xl p-8 text-white shadow-xl">
+                <h3 class="text-2xl font-extrabold mb-2">Need a custom eco-alternative for your industry?</h3>
+                <p class="text-green-50 text-sm mb-6 max-w-2xl mx-auto">Explore our full database of 50,000 curated items spanning organic bio-textiles, plant-based sleeping pods, and zero-deforestation timber alternatives.</p>
+                <button onclick="openManifestoModal()" class="px-6 py-3 bg-white text-slate-900 hover:bg-slate-100 font-bold rounded-xl text-sm transition-all shadow-lg">
+                    Access Complete 50k Database PDF
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION 4: MAGAZINE LIFESTYLE & 100 GREEN HABITS -->
+    <section id="magazine" class="py-20 bg-white border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto space-y-3 mb-14">
+                <span class="text-xs font-extrabold uppercase tracking-widest text-sky-600">Green Living Magazine</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">100 Habits for Bio-Cosmic Health</h2>
+                <p class="text-slate-600 text-sm">Actionable tips for daily food, deep natural sleep, eye protection, natural love/sex tips, and chemical-free hydration.</p>
+            </div>
+
+            <!-- Magazine Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" id="habitsGrid">
+                <!-- Habit Cards Injected Here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-900 text-white pt-16 pb-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-slate-800">
+                <div class="space-y-4">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 rounded-xl gradient-bg flex items-center justify-center text-white text-lg">
+                            <i class="fa-solid fa-leaf"></i>
+                        </div>
+                        <span class="text-lg font-bold tracking-tight">GREEN WORLD</span>
+                    </div>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        Pioneering the global transition away from nature destruction. Founded by Amim Ahsan to champion 50,000 eco-alternatives for Earth and cosmic longevity.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="text-sm font-bold text-slate-200 mb-4">Core Philosophy</h4>
+                    <ul class="space-y-2 text-xs text-slate-400">
+                        <li><a href="#hub" class="hover:text-green-400 transition-colors">Zero Deforestation Timber</a></li>
+                        <li><a href="#hub" class="hover:text-green-400 transition-colors">Organic Bio-Plastic Replacements</a></li>
+                        <li><a href="#hub" class="hover:text-green-400 transition-colors">Atmospheric Oxygen Renewal</a></li>
+                        <li><a href="#hub" class="hover:text-green-400 transition-colors">Eye & Hair Biological Recovery</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-sm font-bold text-slate-200 mb-4">Resource Libraries</h4>
+                    <ul class="space-y-2 text-xs text-slate-400">
+                        <li><button onclick="toggleDrawer('booksDrawer')" class="hover:text-green-400 transition-colors">1,000 Eco Books</button></li>
+                        <li><button onclick="toggleDrawer('visionariesDrawer')" class="hover:text-green-400 transition-colors">100 Green Leaders</button></li>
+                        <li><button onclick="openManifestoModal()" class="hover:text-green-400 transition-colors">50,000 Word Manifesto</button></li>
+                        <li><a href="#magazine" class="hover:text-green-400 transition-colors">100 Daily Habits</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-sm font-bold text-slate-200 mb-4">Philosophy Founder</h4>
+                    <div class="bg-slate-800/80 rounded-2xl p-4 border border-slate-700/60">
+                        <p class="text-xs font-semibold text-slate-300">Amim Ahsan</p>
+                        <p class="text-[11px] text-slate-400 mt-1">Lead Author & Environmental Philosopher</p>
+                        <p class="text-[11px] text-green-400 mt-2 font-mono">Status: Active Planetary Protection</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pt-8 flex flex-col sm:flex-row justify-between items-center text-xs text-slate-500">
+                <p>&copy; 2026 Green World Philosophy Platform. All rights preserved.</p>
+                <div class="flex space-x-6 mt-4 sm:mt-0">
+                    <span class="hover:text-slate-400 cursor-pointer">Privacy & Bio-Ethics</span>
+                    <span class="hover:text-slate-400 cursor-pointer">Cosmic Harmony Charter</span>
+                    <span class="hover:text-slate-400 cursor-pointer">Global Eco Network</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODAL 1: 50,000 WORD MANIFESTO PDF READER -->
+    <div id="manifestoModal" class="fixed inset-0 z-50 hidden bg-slate-900/80 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-4xl w-full max-h-[90vh] flex flex-col shadow-2xl overflow-hidden border border-slate-100">
+            <!-- Modal Header -->
+            <div class="px-6 py-4 bg-slate-900 text-white flex items-center justify-between">
+                <div class="flex items-center space-x-3">
+                    <i class="fa-solid fa-file-pdf text-red-500 text-2xl"></i>
+                    <div>
+                        <h3 class="font-bold text-sm sm:text-base">Manifesto: How We Pollute the World & Universe & What We Must Do</h3>
+                        <p class="text-xs text-slate-400">50,000 Word Comprehensive Eco-Doctrine by Amim Ahsan</p>
+                    </div>
+                </div>
+                <button onclick="closeManifestoModal()" class="w-8 h-8 rounded-full bg-slate-800 text-slate-400 hover:text-white flex items-center justify-center">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <!-- PDF Viewer Body / Simulated Reader -->
+            <div class="p-6 sm:p-8 overflow-y-auto custom-scrollbar flex-1 space-y-6 text-slate-700 leading-relaxed">
+                <div class="bg-green-50 border border-green-200 rounded-2xl p-5 flex items-center space-x-4">
+                    <i class="fa-solid fa-book-open text-green-600 text-3xl"></i>
+                    <div>
+                        <h4 class="font-bold text-green-900 text-sm">Interactive Reader Mode</h4>
+                        <p class="text-xs text-green-700">Click any chapter title below to jump directly into the full theoretical breakdown of cosmic and terrestrial preservation.</p>
+                    </div>
+                </div>
+
+                <div class="space-y-4">
+                    <h3 class="text-xl font-bold text-slate-900 border-b pb-2">Chapter I: The Bio-Body & Deforestation Connection</h3>
+                    <p class="text-sm">Human eye health, hair follicle resilience, and respiratory purity are direct reflections of forest canopy density. Cutting down ancient trees strips natural negative ions from the lower troposphere, leading to accelerated eye declensions and organ deterioration...</p>
+
+                    <h3 class="text-xl font-bold text-slate-900 border-b pb-2">Chapter II: Plastic Polybag Eradication</h3>
+                    <p class="text-sm">Polyethylene compounds do not merely sit in soil; they break into micro-nanoparticles that alter soil subterranean electricity. We outline 5,000 direct starch-based, mushroom-mycelium, and banana-leaf packaging replacements...</p>
+
+                    <h3 class="text-xl font-bold text-slate-900 border-b pb-2">Chapter III: Atmospheric Oxygen & Carbon Restoration</h3>
+                    <p class="text-sm">Combustion engine pollutants and industrial carbon emissions distort celestial star clarity and atmospheric refractivity. By implementing localized bio-algae oxygen scrubbers, we can revert urban carbon levels back to pre-industrial equilibrium...</p>
+
+                    <h3 class="text-xl font-bold text-slate-900 border-b pb-2">Chapter IV: Cosmic & Planetary Eco-Disasters</h3>
+                    <p class="text-sm">Space debris, satellite radiation interference, and orbital pollution disrupt Earth's magnetosphere. Our philosophy extends planetary stewardship into extraterrestrial orbital ethics, preserving the Moon and neighboring celestial bodies...</p>
+                </div>
+            </div>
+
+            <!-- Reader Footer -->
+            <div class="px-6 py-4 bg-slate-50 border-t flex justify-between items-center text-xs text-slate-500">
+                <span>Document Status: Verified Green Philosophy Standard</span>
+                <button onclick="closeManifestoModal()" class="px-4 py-2 bg-slate-900 text-white rounded-xl font-semibold">Close Viewer</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL 2: ITEM ACTIONABLE DETAILS ("WHAT TO DO") -->
+    <div id="detailModal" class="fixed inset-0 z-50 hidden bg-slate-900/80 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl overflow-hidden relative space-y-6">
+            <button onclick="closeDetailModal()" class="absolute top-4 right-4 w-8 h-8 rounded-full bg-slate-100 text-slate-500 hover:bg-slate-200 flex items-center justify-center">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div class="flex items-center space-x-4">
+                <div id="detailModalIcon" class="w-16 h-16 rounded-2xl bg-green-100 flex items-center justify-center text-green-600 text-3xl">
+                    <i class="fa-solid fa-seedling"></i>
+                </div>
+                <div>
+                    <span id="detailModalCategory" class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-green-100 text-green-800 uppercase tracking-wider">Category</span>
+                    <h3 id="detailModalTitle" class="text-xl font-bold text-slate-900 mt-1">Item Alternative Name</h3>
+                    <div id="detailModalStars" class="flex text-amber-400 text-xs mt-1">
+                        <!-- Stars -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="space-y-3">
+                <h4 class="text-xs font-extrabold uppercase text-slate-400 tracking-wider">Action Plan: What To Do</h4>
+                <div id="detailModalWhatToDo" class="bg-slate-50 border border-slate-200 rounded-2xl p-4 text-sm text-slate-700 leading-relaxed">
+                    <!-- Action steps -->
+                </div>
+            </div>
+
+            <div class="bg-sky-50 border border-sky-100 rounded-2xl p-4 flex items-start space-x-3">
+                <i class="fa-solid fa-earth-americas text-sky-600 mt-0.5"></i>
+                <p id="detailModalImpact" class="text-xs text-sky-900">
+                    Eco-Impact: Directly saves 120kg of synthetic waste and reduces carbon footprint by 45% annually.
+                </p>
+            </div>
+
+            <button onclick="closeDetailModal()" class="w-full py-3 bg-green-600 hover:bg-green-700 text-white font-bold rounded-xl text-sm transition-all shadow-md shadow-green-500/20">
+                Adopt This Alternative
+            </button>
+        </div>
+    </div>
+
+    <!-- DRAWER 1: 1,000 BOOKS LIBRARY -->
+    <div id="booksDrawer" class="fixed inset-y-0 right-0 z-50 w-full max-w-md bg-white shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col">
+        <div class="p-6 bg-slate-900 text-white flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <i class="fa-solid fa-book-bookmark text-green-400 text-xl"></i>
+                <div>
+                    <h3 class="font-bold text-base">1,000 Green Books</h3>
+                    <p class="text-xs text-slate-400">Curated Eco-Literature & Writers</p>
+                </div>
+            </div>
+            <button onclick="toggleDrawer('booksDrawer')" class="text-slate-400 hover:text-white text-xl">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+
+        <div class="p-4 bg-slate-50 border-b border-slate-200">
+            <input type="text" id="bookSearchInput" onkeyup="filterBooks()" placeholder="Search title or writer (e.g. Amim Ahsan, Bill Clinton)..." class="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-green-500">
+        </div>
+
+        <div class="p-6 overflow-y-auto custom-scrollbar flex-1 space-y-4" id="booksListContainer">
+            <!-- Books injected by JS -->
+        </div>
+    </div>
+
+    <!-- DRAWER 2: 100 GREEN WORLD VISIONARIES -->
+    <div id="visionariesDrawer" class="fixed inset-y-0 right-0 z-50 w-full max-w-md bg-white shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col">
+        <div class="p-6 bg-slate-900 text-white flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <i class="fa-solid fa-users text-sky-400 text-xl"></i>
+                <div>
+                    <h3 class="font-bold text-base">100 Green Champions</h3>
+                    <p class="text-xs text-slate-400">Prominent Environmental Thinkers</p>
+                </div>
+            </div>
+            <button onclick="toggleDrawer('visionariesDrawer')" class="text-slate-400 hover:text-white text-xl">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+
+        <div class="p-4 bg-slate-50 border-b border-slate-200">
+            <input type="text" id="visionarySearchInput" onkeyup="filterVisionaries()" placeholder="Search green champions..." class="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-sky-500">
+        </div>
+
+        <div class="p-6 overflow-y-auto custom-scrollbar flex-1 space-y-4" id="visionariesListContainer">
+            <!-- Visionaries injected by JS -->
+        </div>
+    </div>
+
+    <!-- DRAWER 3: MAIN MENU DRAWER -->
+    <div id="mainMenuDrawer" class="fixed inset-y-0 right-0 z-50 w-full max-w-sm bg-white shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col">
+        <div class="p-6 bg-slate-900 text-white flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <i class="fa-solid fa-leaf text-green-400 text-xl"></i>
+                <span class="font-bold text-base">Green Philosophy Hub</span>
+            </div>
+            <button onclick="toggleDrawer('mainMenuDrawer')" class="text-slate-400 hover:text-white text-xl">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+
+        <div class="p-6 flex-1 space-y-6">
+            <div class="space-y-2">
+                <span class="text-xs font-bold text-slate-400 uppercase tracking-wider">Quick Navigation</span>
+                <a href="#hero" onclick="toggleDrawer('mainMenuDrawer')" class="block p-3 rounded-xl hover:bg-slate-100 font-semibold text-slate-700">Philosophy Home</a>
+                <a href="#hub" onclick="toggleDrawer('mainMenuDrawer')" class="block p-3 rounded-xl hover:bg-slate-100 font-semibold text-slate-700">Pollution & Cosmic Hub</a>
+                <a href="#alternatives" onclick="toggleDrawer('mainMenuDrawer')" class="block p-3 rounded-xl hover:bg-slate-100 font-semibold text-slate-700">50,000 Eco-Alternatives</a>
+                <a href="#magazine" onclick="toggleDrawer('mainMenuDrawer')" class="block p-3 rounded-xl hover:bg-slate-100 font-semibold text-slate-700">100 Green Habits</a>
+            </div>
+
+            <div class="space-y-3 pt-6 border-t border-slate-100">
+                <span class="text-xs font-bold text-slate-400 uppercase tracking-wider">Interactive Modules</span>
+                <button onclick="toggleDrawer('mainMenuDrawer'); toggleDrawer('booksDrawer')" class="w-full flex items-center justify-between p-3 rounded-xl bg-green-50 text-green-900 font-semibold text-sm">
+                    <span class="flex items-center space-x-2">
+                        <i class="fa-solid fa-book-bookmark text-green-600"></i>
+                        <span>1,000 Eco Books</span>
+                    </span>
+                    <i class="fa-solid fa-chevron-right text-xs text-green-600"></i>
+                </button>
+                <button onclick="toggleDrawer('mainMenuDrawer'); toggleDrawer('visionariesDrawer')" class="w-full flex items-center justify-between p-3 rounded-xl bg-sky-50 text-sky-900 font-semibold text-sm">
+                    <span class="flex items-center space-x-2">
+                        <i class="fa-solid fa-users text-sky-600"></i>
+                        <span>100 Green Champions</span>
+                    </span>
+                    <i class="fa-solid fa-chevron-right text-xs text-sky-600"></i>
+                </button>
+                <button onclick="toggleDrawer('mainMenuDrawer'); openManifestoModal()" class="w-full flex items-center justify-between p-3 rounded-xl bg-slate-900 text-white font-semibold text-sm">
+                    <span class="flex items-center space-x-2">
+                        <i class="fa-solid fa-file-pdf text-red-400"></i>
+                        <span>50k Manifesto PDF</span>
+                    </span>
+                    <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- JAVASCRIPT DATA & LOGIC -->
+    <script>
+        // --- DATA STORE ---
+
+        // 1. Pollution Data Hub
+        const pollutionData = [
+            {
+                id: 'air',
+                title: 'Air & Atmospheric Oxygen',
+                icon: 'fa-wind',
+                color: 'text-sky-500',
+                bgColor: 'bg-sky-50 border-sky-200',
+                problem: 'Industrial smog, carbon emissions, deforestation strip vital negative ions and oxygen density, degrading biological lungs and celestial atmospheric clarity.',
+                solution: 'Deploy micro-algae photobioreactors, urban micro-forests, zero-emission hydrogen energy, and global carbon-capture canopy zones.'
+            },
+            {
+                id: 'water',
+                title: 'Water & River Ecosystems',
+                icon: 'fa-droplet',
+                color: 'text-blue-500',
+                bgColor: 'bg-blue-50 border-blue-200',
+                problem: 'Toxic industrial runoff, chemical dumping, and plastic micro-fibers suffocating river beds, aquatic organ systems, and clean drinking aquifers.',
+                solution: 'Bio-remediation using vetiver grass networks, natural wetlands filtration, zero-discharge closed industrial water circuits.'
+            },
+            {
+                id: 'soil',
+                title: 'Soil, Land & Deforestation',
+                icon: 'fa-mountain',
+                color: 'text-emerald-600',
+                bgColor: 'bg-emerald-50 border-emerald-200',
+                problem: 'Heavy machinery, synthetic fertilizers, clear-cutting woods, and urban asphalt destroy soil subterranean micro-biomes and cause earthquake vulnerabilities.',
+                solution: 'Permaculture rotational farming, mycorrhizal fungal bio-fertilizers, strict zero-deforestation laws, and timber-replacement materials.'
+            },
+            {
+                id: 'noise',
+                title: 'Sound & Vibration Noise',
+                icon: 'fa-volume-high',
+                color: 'text-amber-500',
+                bgColor: 'bg-amber-50 border-amber-200',
+                problem: 'Constant industrial acoustics and urban sonar disrupt animal navigation, biological sleep circadian cycles, and neurological tranquility.',
+                solution: 'Acoustic green vegetative barriers, silent electric transportation corridors, biomimetic quiet machinery designs.'
+            },
+            {
+                id: 'plastic',
+                title: 'Plastic & Synthetic Polybags',
+                icon: 'fa-box-tissue',
+                color: 'text-teal-600',
+                bgColor: 'bg-teal-50 border-teal-200',
+                problem: 'Non-biodegradable synthetic polybags accumulate for 500+ years in marine and soil biomes, leaching chemical carcinogens into human food chains.',
+                solution: '100% cassava starch bags, seaweed-derived edible wrapping, fungal mycelium protective packaging.'
+            }
+        ];
+
+        // 2. Categories & Eco-Alternatives (50,000 Catalog Representative Dataset)
+        const categories = [
+            'All Categories', 'Necessary Products', 'Food & Nutrition', 'Sleep & Health', 
+            'Mind & Wellness', 'Clean Hydration', 'Intimacy & Bio-Health', 
+            'Eco-Clothing', 'Human Body Care', 'Animal & Creature Rights'
+        ];
+
+        const ecoAlternatives = [
+            {
+                id: 1,
+                name: 'Cassava Starch Polybag',
+                category: 'Necessary Products',
+                icon: 'fa-bag-shopping',
+                stars: 5,
+                image: 'https://images.unsplash.com/photo-1610557892470-55d9e80c0bce?auto=format&fit=crop&q=80&w=400',
+                whatToDo: 'Replace all single-use plastic polybags with organic cassava starch bags. They dissolve naturally in warm water within minutes and biodegrade completely in soil within 30 days without microplastic residue.',
+                impact: 'Eliminates synthetic polyethylene accumulation in local water channels and soil micro-biomes.'
+            },
+            {
+                id: 2,
+                name: 'Mycelium Timber & Furniture',
+                category: 'Necessary Products',
+                icon: 'fa-tree',
+                stars: 5,
+                image: 'https://images.unsplash.com/photo-1538688525198-9b88f6f53126?auto=format&fit=crop&q=80&w=400',
+                whatToDo: 'Utilize mushroom mycelium roots grown inside agricultural waste molds to build structural furniture and acoustic wall panels instead of felling ancient natural woods and trees.',
+                impact: 'Saves 100% of hardwood trees from logging while creating fire-resistant, bio-pure household items.'
+            },
+            {
+                id: 3,
+                name: 'Spirulina Bio-Proteins',
+                category: 'Food & Nutrition',
+                icon: 'fa-bowl-rice',
+                stars: 5,
+                image: 'https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&q=80&w=400',
+                whatToDo: 'Shift from land-intensive livestock farming to hyper-nutrient micro-algae spirulina and chlorella vertical tanks. Provide complete protein chains with zero soil erosion.',
+                impact: 'Reduces agricultural water usage by 90% and stops livestock methane emissions.'
+            },
+            {
+                id: 4,
+                name: 'Organic Hemp Leather',
+                category: 'Eco-Clothing',
+                icon: 'fa-shirt',
+                stars: 5,
+                image: 'https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&q=80&w=400',
+                whatToDo: 'Adopt bio-tanned hemp fibers and pineapple leaf leather (Piñatex) for footwear and apparel instead of animal hides or toxic petroleum synthetic leather.',
+                impact: 'Protects creature lives and prevents toxic chromium tannery effluent from entering rivers.'
+            },
+            {
+                id: 5,
+                name: 'Circadian Grounding Bedding',
+                category: 'Sleep & Health',
+                icon: 'fa-bed',
+                stars: 5,
+                image: 'https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&q=80&w=400',
+                whatToDo: 'Sleep on organic unbleached bamboo mattress cores integrated with silver-threaded conductive grounding cables to restore biological cellular balance during deep sleep.',
+                impact: 'Prevents cellular inflammation and reduces reliance on synthetic foam materials.'
+            },
+            {
+                id: 6,
+                name: 'Natural Solar Ocular drops',
+                category: 'Human Body Care',
+                icon: 'fa-eye',
+                stars: 5,
+                image: 'https://images.unsplash.com/photo-1508296695146-257a814070b4?auto=format&fit=crop&q=80&w=400',
+                whatToDo: 'Treat screen-induced eye declensions and fatigue with organic botanical eyewashes containing eyebright herb and natural mineral saline instead of chemical preservatives.',
+                impact: 'Preserves natural human optic clarity while eliminating plastic dropper bottle waste.'
+            },
+            {
+                id: 7,
+                name: 'Biological Herbal Hair Elixir',
+                category: 'Human Body Care',
+                icon: 'fa-spa',
+                stars: 5,
+                image: 'https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?auto=format&fit=crop&q=80&w=400',
+                whatToDo: 'Reverse hair loss caused by hard water chemicals and synthetic sulfate shampoos using cold-pressed bhringraj, amla, and coconut oils brewed in clay pots.',
+                impact: 'Keeps water tables free from SLS and silicone chemicals.'
+            },
+            {
+                id: 8,
+                name: 'Zero-Chemical Bio-Intimacy Gel',
+                category: 'Intimacy & Bio-Health',
+                icon: 'fa-heart',
+                stars: 5,
+                image: 'https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&q=80&w=400',
+                whatToDo: 'Utilize 100% natural aloe vera and botanical hyaluronic acid formulations for personal intimacy, packaged in refillable glass dispensers.',
+                impact: 'Prevents endocrine-disrupting phthalates and parabens from entering human bio-bodies.'
+            }
+        ];
+
+        // 3. 1,000 Books Library (Representative List with Writers)
+        const booksData = [
+            { id: 1, title: "Green World Philosophy Doctrine", writer: "Amim Ahsan", topic: "Universal Eco-Harmonization", year: 2024 },
+            { id: 2, title: "Giving: How Each of Us Can Change the World", writer: "Bill Clinton", topic: "Global Initiatives & Sustainability", year: 2007 },
+            { id: 3, title: "Silent Spring", writer: "Rachel Carson", topic: "Chemical Pollution & Nature", year: 1962 },
+            { id: 4, title: "The Book of Hope: A Survival Guide", writer: "Jane Goodall", topic: "Biodiversity & Creature Protection", year: 2021 },
+            { id: 5, title: "A Life on Our Planet", writer: "David Attenborough", topic: "Planetary Restoration", year: 2020 },
+            { id: 6, title: "Cosmic Eco-Systems & Bio-Bodies", writer: "Amim Ahsan", topic: "Human & Cosmic Balance", year: 2025 },
+            { id: 7, title: "Unstoppable Global Green Transition", writer: "Amim Ahsan", topic: "50,000 Industrial Alternatives", year: 2023 },
+            { id: 8, title: "The Uninhabitable Earth", writer: "David Wallace-Wells", topic: "Climate Crisis Analysis", year: 2019 }
+        ];
+
+        // 4. 100 Green World Champions / Visionaries
+        const visionariesData = [
+            { id: 1, name: "Amim Ahsan", role: "Founder & Lead Green Philosopher", focus: "Cosmic Eco-Balance & 50,000 Alternatives", image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=150" },
+            { id: 2, name: "Bill Clinton", role: "Global Leader & Foundation Chair", focus: "Clinton Climate Initiative & Renewable Infrastructure", image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=150" },
+            { id: 3, name: "Dr. Jane Goodall", role: "Primatologist & Ethologist", focus: "Animal Rights & Habitat Conservation", image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=150" },
+            { id: 4, name: "Wangari Maathai", role: "Green Belt Movement Founder", focus: "Afforestation & Soil Restoration", image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=150" },
+            { id: 5, name: "Sir David Attenborough", role: "Naturalist & Broadcaster", focus: "Planetary Biodiversity Preservation", image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=150" }
+        ];
+
+        // 5. 100 Magazine Habits & Lifestyle Tips
+        const habitsData = [
+            {
+                id: 1,
+                title: "Sun-Activated Eye Cleanse",
+                category: "Eye & Body Care",
+                image: "https://images.unsplash.com/photo-1508296695146-257a814070b4?auto=format&fit=crop&q=80&w=300",
+                desc: "Gaze towards early morning natural sunlight (before 8 AM) for 5 minutes without glass lenses to stimulate retinal mitochondria and reverse optical strain."
+            },
+            {
+                id: 2,
+                title: "Clay-Filtered Living Hydration",
+                category: "Clean Drink",
+                image: "https://images.unsplash.com/photo-1548839140-29a749e1cf4e?auto=format&fit=crop&q=80&w=300",
+                desc: "Store drinking water in unglazed terracotta vessels to naturally alkaline pH levels, absorb excess toxins, and cool water without electricity."
+            },
+            {
+                id: 3,
+                title: "Plant-Based Organic Intimacy",
+                category: "Love & Intimacy",
+                image: "https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&q=80&w=300",
+                desc: "Choose bio-degradable, chemical-free, natural rubber latex intimacy products enriched with pure organic essential oils."
+            },
+            {
+                id: 4,
+                title: "Barefoot Earth Grounding",
+                category: "Sleep & Mind",
+                image: "https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&q=80&w=300",
+                desc: "Walk barefoot on wet grass or soil for 15 minutes daily to discharge static electromagnetic fields built up from mobile devices."
+            }
+        ];
+
+        // --- APP INITIALIZATION ---
+        let selectedCategory = 'All Categories';
+        let activePollutionId = 'air';
+
+        window.onload = function() {
+            renderPollutionHub();
+            renderCategoryFilters();
+            renderAlternativesGrid();
+            renderHabitsGrid();
+            renderBooksList(booksData);
+            renderVisionariesList(visionariesData);
+        };
+
+        // --- UI RENDER FUNCTIONS ---
+
+        // 1. Pollution Hub Tabs & Details
+        function renderPollutionHub() {
+            const tabsContainer = document.getElementById('pollutionTabs');
+            const detailContainer = document.getElementById('pollutionDetailContainer');
+
+            tabsContainer.innerHTML = pollutionData.map(item => `
+                <button onclick="selectPollution('${item.id}')" 
+                    class="p-4 rounded-2xl flex flex-col items-center justify-center border transition-all text-center space-y-2 ${activePollutionId === item.id ? 'bg-slate-900 text-white border-slate-900 shadow-lg' : 'bg-white text-slate-700 border-slate-200 hover:bg-slate-100'}">
+                    <i class="fa-solid ${item.icon} text-xl ${activePollutionId === item.id ? 'text-green-400' : item.color}"></i>
+                    <span class="text-xs font-bold">${item.title}</span>
+                </button>
+            `).join('');
+
+            const activeItem = pollutionData.find(i => i.id === activePollutionId);
+            detailContainer.className = `rounded-3xl p-6 sm:p-8 border transition-all ${activeItem.bgColor}`;
+            detailContainer.innerHTML = `
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <div class="space-y-4">
+                        <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-white/80 text-slate-800 text-xs font-bold">
+                            <i class="fa-solid ${activeItem.icon} ${activeItem.color}"></i>
+                            <span>${activeItem.title} Diagnostics</span>
+                        </div>
+                        <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900">The Degradation Problem</h3>
+                        <p class="text-sm text-slate-700 leading-relaxed">${activeItem.problem}</p>
+                    </div>
+
+                    <div class="bg-white rounded-2xl p-6 shadow-md border border-slate-200/60 space-y-3">
+                        <h4 class="text-xs font-extrabold text-green-700 uppercase tracking-wider">Green World Solution</h4>
+                        <p class="text-sm text-slate-800 font-medium leading-relaxed">${activeItem.solution}</p>
+                        <button onclick="openManifestoModal()" class="inline-flex items-center space-x-2 text-xs font-bold text-sky-600 hover:text-sky-700 pt-2">
+                            <span>Read detailed manifesto chapter</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            `;
+        }
+
+        function selectPollution(id) {
+            activePollutionId = id;
+            renderPollutionHub();
+        }
+
+        // 2. Category Filters & Grid
+        function renderCategoryFilters() {
+            const filterContainer = document.getElementById('categoryFilterContainer');
+            filterContainer.innerHTML = categories.map(cat => `
+                <button onclick="filterCategory('${cat}')" 
+                    class="px-4 py-2.5 rounded-2xl text-xs font-bold whitespace-nowrap transition-all ${selectedCategory === cat ? 'bg-green-600 text-white shadow-md shadow-green-500/30' : 'bg-white text-slate-600 hover:bg-slate-200 border border-slate-200'}">
+                    ${cat}
+                </button>
+            `).join('');
+        }
+
+        function filterCategory(cat) {
+            selectedCategory = cat;
+            renderCategoryFilters();
+            renderAlternativesGrid();
+        }
+
+        function renderAlternativesGrid(filteredItems = null) {
+            const grid = document.getElementById('alternativesGrid');
+            const itemsToRender = filteredItems || (selectedCategory === 'All Categories' 
+                ? ecoAlternatives 
+                : ecoAlternatives.filter(item => item.category === selectedCategory));
+
+            if (itemsToRender.length === 0) {
+                grid.innerHTML = `
+                    <div class="col-span-full text-center py-12 text-slate-400">
+                        <i class="fa-solid fa-seedling text-4xl mb-2"></i>
+                        <p class="text-sm font-medium">No alternatives found matching your search term.</p>
+                    </div>
+                `;
+                return;
+            }
+
+            grid.innerHTML = itemsToRender.map(item => `
+                <div class="bg-white rounded-3xl overflow-hidden border border-slate-200/80 card-hover flex flex-col justify-between">
+                    <div>
+                        <div class="relative h-44 overflow-hidden bg-slate-100">
+                            <img src="${item.image}" alt="${item.name}" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" onerror="this.src='https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=400'">
+                            <span class="absolute top-3 right-3 bg-white/90 backdrop-blur-md px-2.5 py-1 rounded-full text-[10px] font-extrabold text-slate-800">
+                                ${item.category}
+                            </span>
+                        </div>
+                        <div class="p-5 space-y-3">
+                            <div class="flex items-center space-x-2 text-amber-400 text-xs">
+                                ${Array(item.stars).fill('<i class="fa-solid fa-star"></i>').join('')}
+                                <span class="text-slate-400 text-[10px] font-semibold ml-1">Futuristic Lvl 5</span>
+                            </div>
+                            <h3 class="text-base font-bold text-slate-900 leading-snug">${item.name}</h3>
+                        </div>
+                    </div>
+                    <div class="p-5 pt-0">
+                        <button onclick="openDetailModal(${item.id})" class="w-full py-2.5 bg-slate-100 hover:bg-green-600 hover:text-white text-slate-700 font-semibold rounded-xl text-xs transition-all flex items-center justify-center space-x-2">
+                            <span>View Details (What To Do)</span>
+                            <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                        </button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // 3. Magazine Habits Grid
+        function renderHabitsGrid() {
+            const container = document.getElementById('habitsGrid');
+            container.innerHTML = habitsData.map(habit => `
+                <div class="bg-slate-50 border border-slate-200 rounded-3xl overflow-hidden card-hover flex flex-col justify-between">
+                    <div>
+                        <img src="${habit.image}" alt="${habit.title}" class="w-full h-40 object-cover">
+                        <div class="p-5 space-y-2">
+                            <span class="text-[10px] font-bold text-sky-600 uppercase tracking-widest">${habit.category}</span>
+                            <h3 class="text-base font-bold text-slate-900">${habit.title}</h3>
+                            <p class="text-xs text-slate-600 leading-relaxed">${habit.desc}</p>
+                        </div>
+                    </div>
+                    <div class="p-5 pt-0">
+                        <span class="inline-block text-[11px] font-bold text-green-600 cursor-pointer hover:underline" onclick="openManifestoModal()">
+                            Read full habit guide &rarr;
+                        </span>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // 4. Books Drawer
+        function renderBooksList(books) {
+            const container = document.getElementById('booksListContainer');
+            container.innerHTML = books.map(book => `
+                <div class="p-4 bg-slate-50 border border-slate-200 rounded-2xl space-y-2">
+                    <span class="text-[10px] font-bold text-green-600 uppercase tracking-wider">${book.topic}</span>
+                    <h4 class="text-sm font-bold text-slate-900 leading-snug">${book.title}</h4>
+                    <div class="flex items-center justify-between text-xs text-slate-500 pt-1 border-t border-slate-200/60">
+                        <span class="font-semibold text-slate-700">Author: ${book.writer}</span>
+                        <span>${book.year}</span>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function filterBooks() {
+            const query = document.getElementById('bookSearchInput').value.toLowerCase();
+            const filtered = booksData.filter(b => b.title.toLowerCase().includes(query) || b.writer.toLowerCase().includes(query));
+            renderBooksList(filtered);
+        }
+
+        // 5. Visionaries Drawer
+        function renderVisionariesList(visionaries) {
+            const container = document.getElementById('visionariesListContainer');
+            container.innerHTML = visionaries.map(v => `
+                <div class="p-4 bg-slate-50 border border-slate-200 rounded-2xl flex items-center space-x-4">
+                    <img src="${v.image}" alt="${v.name}" class="w-12 h-12 rounded-xl object-cover ring-2 ring-sky-500/20">
+                    <div class="space-y-0.5">
+                        <h4 class="text-sm font-bold text-slate-900">${v.name}</h4>
+                        <p class="text-[11px] font-semibold text-sky-600">${v.role}</p>
+                        <p class="text-[11px] text-slate-500">${v.focus}</p>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function filterVisionaries() {
+            const query = document.getElementById('visionarySearchInput').value.toLowerCase();
+            const filtered = visionariesData.filter(v => v.name.toLowerCase().includes(query) || v.focus.toLowerCase().includes(query));
+            renderVisionariesList(filtered);
+        }
+
+        // --- GLOBAL SEARCH & MODALS LOGIC ---
+
+        function handleGlobalSearch(e) {
+            if (e.key === 'Enter') {
+                triggerSearch();
+            }
+        }
+
+        function triggerSearch() {
+            const query = document.getElementById('globalSearchInput').value.toLowerCase().trim();
+            if (!query) {
+                renderAlternativesGrid();
+                return;
+            }
+            const filtered = ecoAlternatives.filter(item => 
+                item.name.toLowerCase().includes(query) || 
+                item.category.toLowerCase().includes(query) ||
+                item.whatToDo.toLowerCase().includes(query)
+            );
+            renderAlternativesGrid(filtered);
+            scrollToSection('alternatives');
+        }
+
+        function scrollToSection(id) {
+            document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function toggleDrawer(drawerId) {
+            const drawer = document.getElementById(drawerId);
+            if (drawer.classList.contains('translate-x-full')) {
+                drawer.classList.remove('translate-x-full');
+            } else {
+                drawer.classList.add('translate-x-full');
+            }
+        }
+
+        function openManifestoModal() {
+            document.getElementById('manifestoModal').classList.remove('hidden');
+        }
+
+        function closeManifestoModal() {
+            document.getElementById('manifestoModal').classList.add('hidden');
+        }
+
+        function openDetailModal(itemId) {
+            const item = ecoAlternatives.find(i => i.id === itemId);
+            if (!item) return;
+
+            document.getElementById('detailModalTitle').innerText = item.name;
+            document.getElementById('detailModalCategory').innerText = item.category;
+            document.getElementById('detailModalWhatToDo').innerText = item.whatToDo;
+            document.getElementById('detailModalImpact').innerText = `Eco-Impact: ${item.impact}`;
+            document.getElementById('detailModalStars').innerHTML = Array(item.stars).fill('<i class="fa-solid fa-star"></i>').join('');
+
+            document.getElementById('detailModal').classList.remove('hidden');
+        }
+
+        function closeDetailModal() {
+            document.getElementById('detailModal').classList.add('hidden');
+        }
+    </script>
+</body>
+</html>
